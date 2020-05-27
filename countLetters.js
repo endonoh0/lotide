@@ -20,7 +20,6 @@ const countLetters = function (str) {
     let noSpace = str.split(' ').join('');
 
     for (let char of noSpace) {
-        console.log("char", char);
         if (obj[char]) {
             obj[char] += 1;
         } else {
