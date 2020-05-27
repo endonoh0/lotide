@@ -16,7 +16,6 @@ const assertArraysEqual = function (first, second) {
 
 const letterPositions = function (sentence) {
     const results = {};
-    // let noSpace = sentence.split(' ').join('');
     let noSpace = sentence;
 
     for (let char of noSpace) {
