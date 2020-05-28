@@ -27,9 +27,8 @@ const letterPositions = function (sentence) {
             results[char].push(index);
             index = noSpace.indexOf(char, index + 1);
         }
-
-
     }
+
     delete results[' '];
     return results;
 };
