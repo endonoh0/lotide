@@ -1,5 +1,5 @@
 const tail = function(arr) {
-  return arr.slice(1);
+  return arr.slice(arr.length -1);
 };
 
 module.exports = tail;
