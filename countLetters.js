@@ -1,19 +1,5 @@
-const eqArrays = function (arr1, arr2) {
-    for (let i = arr1.length; i--;) {
-        if (arr1[i] !== arr2[i]) {
-            return false;
-        }
-    } return true;
-};
-
-const assertArraysEqual = function (first, second) {
-    if (eqArrays(first, second)) {
-        console.log(`✅✅✅ Assertion Passed: ${first} === ${second}`);
-    } else {
-        console.log(`🛑🛑🛑 Assertion Failed:  ${first} !==  ${second}`);
-    }
-};
-
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const countLetters = function (str) {
     const obj = {};
@@ -26,7 +12,6 @@ const countLetters = function (str) {
             obj[char] = 1;
         }
     }
-
     return obj;
 };
 

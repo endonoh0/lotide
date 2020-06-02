@@ -1,22 +1,6 @@
-const eqArrays = function (arr1, arr2) {
-    for (let i = arr1.length; i--;) {
-        if (arr1[i] !== arr2[i]) {
-            return false;
-        }
-    } return true;
-};
-
-const assertArraysEqual = function (first, second) {
-    if (eqArrays(first, second)) {
-        console.log(`✅✅✅ Assertion Passed: ${first} === ${second}`);
-    } else {
-        console.log(`🛑🛑🛑 Assertion Failed:  ${first} !==  ${second}`);
-    }
-};
-
-const letterPositions = function (sentence) {
+const letterPositions = function (str) {
     const results = {};
-    let noSpace = sentence;
+    let noSpace = str;
 
     for (let char of noSpace) {
         results[char] = new Array;
@@ -33,6 +17,4 @@ const letterPositions = function (sentence) {
     return results;
 };
 
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("lighthouse in the house'").h, [3, 5, 15, 18]);
-assertArraysEqual(letterPositions('vancouver').v, [0, 6]);
+module.exports = letterPositions;
