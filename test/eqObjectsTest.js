@@ -15,27 +15,27 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 const cd3 = { c: "1", d: ["2", 3, 5] };
 
 describe('#eqObjects', () => {
-    it('it returns true for "ab" and "ba"', () => {
+    it('returns true for "ab" and "ba"', () => {
         assert.strictEqual(eqObjects(ab, ba), true);
     });
 
-    it('it returns false for "ab" and "abc"', () => {
+    it('returns false for "ab" and "abc"', () => {
         assert.strictEqual(eqObjects(ab, abc), false);
     });
 
-    it('it returns false for "abc" and "efg"', () => {
+    it('returns false for "abc" and "efg"', () => {
         assert.strictEqual(eqObjects(abc, efg), false);
     });
 
-    it('it returns true for "cd" and "dc"', () => {
+    it('returns true for "cd" and "dc"', () => {
         assert.strictEqual(eqObjects(cd, dc), true);
     });
 
-    it('it returns false for "cd" and "cd2"', () => {
+    it('returns false for "cd" and "cd2"', () => {
         assert.strictEqual(eqObjects(cd, cd2), false);
     });
 
-    it('it returns false for "cd2" and "cd3"', () => {
+    it('returns false for "cd2" and "cd3"', () => {
         assert.strictEqual(eqObjects(cd2, cd3), false);
     });
 });
